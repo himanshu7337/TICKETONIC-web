@@ -1,0 +1,19 @@
+<h2 style="font-family:verdana;" style="color:red;">BEST UPCOMING MOVIES...</h2>
+
+<video width="400" height="300" border=3 onclick="play();" onclick="stop();">
+  <source src="judwaa2.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
+<video width="400" height="300" border=3 onclick="play();">
+  <source src="Haseena.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<video width="400" height="300" border=3 onclick="play();">
+  <source src="it.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<br><br><br><br><br>

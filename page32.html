@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ticketonic - Booking</title>
+        
+ <link rel="stylesheet" type="text/css" href="style1.css"> 
+<style>
+.header1 img {
+float: left;
+width: 100px;
+height : 100px;
+background: #0ffff;
+}
+
+.header1 h1{
+position: relative;
+top: 18px;
+left : 10px;
+}
+</style>
+
+	<div class="header1">
+		<a href="index.html"><img src="logoticketonic.png" alt="logo"/>
+		<h1>TICKETONIC</h1></a>
+	</div>
+<br><br><br>	
+		
+
+	
+    </head>
+
+<style>
+		body
+		{
+			background-image: url('disney-hero-blur.jpg');
+			background-attachment: fixed;
+			background-size: 100% 100%;
+		}
+	</style>
+
+
+
+    <body>
+	<form name="myForm"  onsubmit="return validateForm()" method="post">
+
+        <link rel="stylesheet" type="text/css" href="page2.css">   
+
+<style>
+
+.head1 h2{
+position: center;
+text-align:center;
+top: 18px;
+left : 10px;
+}
+</style>
+
+<div class="head1">
+		<h2>BOOK YOUR TICKET</h2> 
+</div>
+
+
+
+        <div id="container">
+            <div id="form">
+		<br><br>
+                <form name="myForm" id="book_tickets" onsubmit="return " method="post">
+                    <fieldset>
+		
+                        <legend>Booking Details</legend>
+
+                        <p>
+                            <label for="theaters"><b>Select Theater : </b></label>
+                            <select id="theatres" required>
+                                <option></option>
+                                <option value="Theater 1">City Pride Kothrud</option>
+                                <option value="Theater 2">INOX Bund garden</option>
+                                <option value="Theater 3">Cinepolis Seasons Mall</option>
+                            </select>
+                        </p>
+
+
+                            <label for="date"><b>Select Date : </b> <span id="dateNote"></span></label>
+                            <input type="date" name="date" id="date" min="today" required />
+
+
+                        <p>
+                            <label for="email"><b>Email ID : </b></label>
+                            <input type="email" name="email" id="email" required>
+                        </p>
+
+                        <p>
+                            <label for="tickets_quantity"><b>Enter No. of Tickets : </b></label>
+                            <input type="number" min="1" name="tickets_quantity" id="tickets_quantity" required />
+                        </p>
+
+                        <div id="submit_wrapper">
+	       <form method="get" action="slide.html">
+                           <button><a href= "payment.html">Book</a></button>
+	       </form>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <p id="perTicketPrice">Per ticket price = &#x20b9; 100.00</p>
+                
+            </div>	    	
+
+        </div>
+
+        
+        
+<!--
+        <script id="worker" type="javascript/worker">
+                function msgWorkerHandler(event){
+                    var jsonString = event.data;
+
+                    var day = jsonString.day;
+                    var number_booked_shows = jsonString.number_booked_shows;
+                    var tickets_quantity = jsonString.tickets_quantity;
+
+                    // set price of each ticket as Rs. 100
+                    var totalPrice = tickets_quantity * 100;
+
+                    // 5% discount if on weekday
+                    if(day > 0 && day < 6){
+                        totalPrice = totalPrice - 0.05 * totalPrice;
+                    }
+
+                    // 10% discount if number of booked shows >= 10
+                    if(number_booked_shows >= 10){
+                        totalPrice = totalPrice - 0.10 * totalPrice;
+                    }
+
+                        postMessage("&#x20b9; " + totalPrice);
+                }
+        </script>
+-->
+
+-->
+<script>
+function validateForm() 
+{     
+    if (document.myForm.uname.value==null || document.myForm.uname.value=="")
+     {
+        alert("Select Theatre");
+        document.myForm.uname.focus() ;
+        return false;
+    }
+
+    var x = document.myForm.email.value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+     if(x==null || x=="")
+    {
+       alert("Email must not be empty");
+       document.myForm.email.focus() ;
+        return false;
+            
+    }
+     if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) 
+    {
+        alert("Not a valid e-mail address");
+        document.myForm.email.focus() ;
+        return false;
+    }
+      
+  if( document.myForm.Zip.value == "" ||
+           isNaN( document.myForm.Zip.value ) ||
+           document.myForm.Zip.value.length != 5 )
+   {
+     alert( "Please provide a zip in the format #####." );
+     document.myForm.Zip.focus() ;
+     return false;
+   }
+-->
+
+return( true );
+}
+</script>
+
+
+
+
+    </body>
+
+</html>
